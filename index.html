@@ -3,11 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/3f2ea24883.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom css & js -->
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
+    <script defer src="./script.js"></script>
     <title>Document</title>
   </head>
   <body>
-    <h1>이제부터 본격적인 Netflix Page를 만들어봅시다!</h1>
+    <main class="container">
+      <header>
+        <nav>
+          <div class="logo">
+            <a href="index.html">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1024px-Netflix_2015_logo.svg.png"
+                alt="logo"
+              />
+            </a>
+          </div>
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </nav>
+      </header>
+      <nav class="gnb">
+        <ul>
+          <li>
+            <a href="#">결제</a>
+            <ul class="submenu">
+              <li><a href="#">결제하기</a></li>
+              <li><a href="#">할인안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">영화</a>
+            <ul class="submenu">
+              <li><a href="#">홈</a></li>
+              <li><a href="#">현재상영작</a></li>
+              <li><a href="#">개봉예정작</a></li>
+              <li><a href="#">인기상영작</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">이벤트</a>
+            <ul class="submenu">
+              <li><a href="#">영화</a></li>
+              <li><a href="#">HOT</a></li>
+              <li><a href="#">제휴할인</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">스토어</a>
+            <ul class="submenu">
+              <li><a href="#">베스트</a></li>
+              <li><a href="#">포토카드</a></li>
+              <li><a href="#">굿즈상품</a></li>
+              <li><a href="#">스낵음료</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">회원가입</a>
+            <ul class="submenu">
+              <li><a href="#">홈</a></li>
+              <li><a href="#">미성년자/성인</a></li>
+              <li><a href="#">국내/해외거주</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <section class="mainSlider">Slider</section>
+      <section class="movie">Movie</section>
+      <section class="faq">
+        <div class="faq-inner">
+          <h1>자주 묻는 질문</h1>
+          <div class="accordion">
+            <div class="title active">넷플릭스란 무엇인가요?</div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sunt
+              nemo quasi doloremque vel, at maiores quaerat sed id! Incidunt
+              deleniti distinctio mollitia ea velit rem, maxime veniam ut
+              sapiente.
+            </div>
+            <div class="title">넷플릭스 요금은 얼마인가요?</div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sunt
+              nemo quasi doloremque vel, at maiores quaerat sed id! Incidunt
+              deleniti distinctio mollitia ea velit rem, maxime veniam ut
+              sapiente.
+            </div>
+            <div class="title">어디에서 시청할 수 있나요?</div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sunt
+              nemo quasi doloremque vel, at maiores quaerat sed id! Incidunt
+              deleniti distinctio mollitia ea velit rem, maxime veniam ut
+              sapiente.
+            </div>
+            <div class="title">멤버십을 해지하려면 어떻게 해야하나요?</div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sunt
+              nemo quasi doloremque vel, at maiores quaerat sed id! Incidunt
+              deleniti distinctio mollitia ea velit rem, maxime veniam ut
+              sapiente.
+            </div>
+            <div class="title">
+              넷플릭스에서 어떤 컨텐츠를 시청할 수 있나요?
+            </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sunt
+              nemo quasi doloremque vel, at maiores quaerat sed id! Incidunt
+              deleniti distinctio mollitia ea velit rem, maxime veniam ut
+              sapiente.
+            </div>
+            <div class="title">아이들이 넷플릭스를 봐도 좋을까요?</div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad sunt
+              nemo quasi doloremque vel, at maiores quaerat sed id! Incidunt
+              deleniti distinctio mollitia ea velit rem, maxime veniam ut
+              sapiente.
+            </div>
+          </div>
+          <div class="newsletter">
+            <p>
+              시청할 준비가 되셨나요?<br />멤버십을 등록하거나 재시작하려면
+              이메일 주소를 입력하세요.
+            </p>
+            <form name="newsletter" action="http://127.0.0.1:5500" method="get">
+              <input
+                type="text"
+                name="emailAddress"
+                id="emailAddress"
+                placeholder="example@example.com"
+              />
+              <input type="submit" value="시작하기" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

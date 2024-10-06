@@ -1,0 +1,202 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* variables */
+/* common */
+html {
+  font-size: 14px;
+  background: #000;
+  color: #fff;
+}
+
+/* contents */
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+/* header */
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  background: #000;
+}
+header nav {
+  width: 900px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 3;
+}
+header nav .logo img {
+  width: auto;
+  height: 30px;
+}
+header nav .search-box i {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* gnb */
+.gnb {
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.4));
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border: 1px solid #dc143c;
+}
+.gnb > ul {
+  width: 900px;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.gnb > ul > li > a {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.gnb > ul > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #dc143c;
+  transform-origin: center;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  transition: width 0.3s;
+}
+.gnb > ul > li > a:hover {
+  color: #dc143c;
+}
+.gnb > ul > li > a:hover::after {
+  width: 100%;
+}
+
+/* mainSlider */
+.mainSlider {
+  width: 100%;
+  height: 600px;
+  border: 1px solid #dc143c;
+}
+
+/* movie */
+.movie {
+  width: 100%;
+  height: 600px;
+  border: 1px solid #dc143c;
+}
+
+/* faq */
+.faq {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.faq .faq-inner {
+  width: 700px;
+}
+.faq .faq-inner h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+.faq .faq-inner .accordion {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+.faq .faq-inner .accordion .title {
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 8px;
+  padding: 10px;
+  position: relative;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.faq .faq-inner .accordion .title::after {
+  content: "+";
+  font-family: "fontawesome";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+}
+.faq .faq-inner .accordion .title.active {
+  background: #353b48;
+}
+.faq .faq-inner .accordion .title.active::after {
+  content: "+";
+  font-family: "fontawesome";
+  transform: translateY(-50%) rotate(45deg);
+}
+.faq .faq-inner .accordion .content {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  padding: 10px;
+  display: none;
+}
+.faq .faq-inner .newsletter {
+  width: 100%;
+  text-align: center;
+}
+.faq .faq-inner .newsletter p {
+  font-size: 1.3rem;
+  color: #dc143c;
+  margin-bottom: 10px;
+}
+.faq .faq-inner .newsletter form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+.faq .faq-inner .newsletter form input[type=text] {
+  height: 100%;
+  border: none;
+  font-size: 1.4rem;
+  flex: 3;
+  padding-left: 10px;
+}
+.faq .faq-inner .newsletter form input[type=text]:focus {
+  outline: none;
+}
+.faq .faq-inner .newsletter form input[type=submit] {
+  height: 100%;
+  border: none;
+  font-size: 1.4rem;
+  flex: 1;
+  background: #dc143c;
+  color: #fff;
+  cursor: pointer;
+}
