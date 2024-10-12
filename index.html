@@ -10,7 +10,7 @@
     ></script>
     <!-- custom css & js -->
     <link rel="stylesheet" href="./style.css" />
-    <script defer src="./script.js"></script>
+    <script defer type="module" src="./script.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -30,6 +30,7 @@
           </div>
         </nav>
       </header>
+      <div class="menu_bg"></div>
       <nav class="gnb">
         <ul>
           <li>
@@ -75,7 +76,7 @@
           </li>
         </ul>
       </nav>
-      <section class="mainSlider">Slider</section>
+      <section class="mainSlider"></section>
       <section class="movie">Movie</section>
       <section class="faq">
         <div class="faq-inner">
@@ -144,5 +145,23 @@
         </div>
       </section>
     </main>
+    <div class="modal-search">
+      <div class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="search">
+        <form name="searchForm" id="searchForm" method="get">
+          <input
+            type="search"
+            id="search-box"
+            placeholder="보고싶은 영화를 검색하세요"
+          />
+          <input type="submit" value="검색하기" />
+        </form>
+        <p class="hash-tag">
+          #흑백요리사 #아시안게임 #오징어게임시즌2 #범죄도시5
+        </p>
+      </div>
+    </div>
   </body>
 </html>

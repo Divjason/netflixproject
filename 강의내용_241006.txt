@@ -1,0 +1,75 @@
+Google > the movie data base
+
+배포 : deploy
+> ex. 제주도에있는 내 친구가 내가만든 넷플릭스 사이트를 볼 수 있도록 하고 싶다!!!
+
+1) Google Firebase
+
+2) Amazon AWS
+
+3) Netlify
+
+4) cafe24
+
+5) dotHome
+
+git > 형상기억관리 도구
+- 작업할 때마다 버전을 생성
+- 보고서 최종 // 보고서_v1
+- 보고서 최최종 // 보고서_v2
+- 보고서 최최최종 // // 보고서_v3
+
+git의 작동원리
+1) vscode > coding
+2) staging area
+3) version naming 기록 (*commit)
+4) 원격저장소 (*git-hub) > 프로젝트마다의 코드를 업로드 레포지토리 > 브랜치 (*복수의 다양한 개발자들이 작업 // 박세진 : 메인페이지 // 수진 : 상세페이지 // 환히 : 로그인 // 예지 : 장바구니
+
+박세진 PM 
+
+master : 최종 코드 push
+
+main = master
+
+2016년까지
+
+> mater > negative
+
+
+
+
+push요청 : develop 브랜치 // 수진 + 환히 + 예지
+
+수진 : 브랜치A
+환히 : 브랜치B
+예지 : 브랜치C
+
+나의 로컬컴퓨터 > git 소유정보 프로필 업데이트
+git config --list
+git config --global user.name "Divjason"
+git config --global user.email "sejinpark@tcocs.com"
+
+git init
+git remote add origin https://github.com/Divjason/netflixproject.git
+git remote -v
+git add .
+git status
+git commit -m "firstcommit"
+git push origin master
+
+----- 
+이후에 추가 수정사항이 발생!!!
+git add .
+git commit -m "edit index"
+git push origin master
+
+*git-hub > 특정 레포지토리 data를 가져온다
+git clone : 최초에 해당 레포지토리를 생성한 생성자가 만든 .git 
+다수의 개발자가 팀프로젝트로 하나의 git 레포지토리를 사용하는 경우
+PM 기본 설정 내용이 담겨있는 코드 최초에 push
+
+PM + 내가 직접 코딩한 데이터
+
+2주 후 // 내가 2주전에 올려놨던 reset 코드에 버그 => 수정
+
+git pull : 레포지토리에서 특정 data만 가져오거나, 일부 data
