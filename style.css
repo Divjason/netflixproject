@@ -65,6 +65,7 @@ header nav .search-box i {
   max-height: 0;
   background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.4));
   transition: opacity 0.3s ease, max-height 0.3s ease;
+  z-index: 1;
 }
 
 /* gnb */
@@ -228,15 +229,14 @@ header nav .search-box i {
   position: relative;
   display: flex;
   justify-content: center;
-  border: 1px solid #dc143c;
 }
 .mainSlider figure {
   width: 100%;
-  height: 100%;
+  height: 800px;
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 1;
+  opacity: 0;
   transition: opacity 1s ease-in-out;
 }
 .mainSlider figure.active {
@@ -254,8 +254,163 @@ header nav .search-box i {
 /* movie */
 .movie {
   width: 100%;
-  height: 600px;
-  border: 1px solid #dc143c;
+  height: 100%;
+}
+.movie .nowPlaying,
+.movie .upcoming,
+.movie .toprated {
+  width: 900px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+}
+.movie .nowPlaying h1,
+.movie .upcoming h1,
+.movie .toprated h1 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+.movie .nowPlaying ul,
+.movie .upcoming ul,
+.movie .toprated ul {
+  display: flex;
+  gap: 25px;
+  transition: transform 0.5s;
+}
+.movie .nowPlaying ul li,
+.movie .upcoming ul li,
+.movie .toprated ul li {
+  cursor: pointer;
+}
+.movie .nowPlaying ul li .moviePoster,
+.movie .upcoming ul li .moviePoster,
+.movie .toprated ul li .moviePoster {
+  width: 160px;
+  height: 234px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.movie .nowPlaying ul li .moviePoster::before,
+.movie .upcoming ul li .moviePoster::before,
+.movie .toprated ul li .moviePoster::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.movie .nowPlaying ul li .moviePoster img,
+.movie .upcoming ul li .moviePoster img,
+.movie .toprated ul li .moviePoster img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.movie .nowPlaying ul li .moviePoster span,
+.movie .upcoming ul li .moviePoster span,
+.movie .toprated ul li .moviePoster span {
+  position: absolute;
+}
+.movie .nowPlaying ul li .moviePoster span:nth-of-type(1),
+.movie .upcoming ul li .moviePoster span:nth-of-type(1),
+.movie .toprated ul li .moviePoster span:nth-of-type(1) {
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 36px;
+  background: rgba(220, 20, 60, 0.7);
+}
+.movie .nowPlaying ul li .moviePoster span:nth-of-type(2),
+.movie .upcoming ul li .moviePoster span:nth-of-type(2),
+.movie .toprated ul li .moviePoster span:nth-of-type(2) {
+  left: 10px;
+  bottom: 10px;
+  font-size: 2.4rem;
+  font-style: italic;
+}
+.movie .nowPlaying ul li .movieTitle,
+.movie .upcoming ul li .movieTitle,
+.movie .toprated ul li .movieTitle {
+  width: 160px;
+  margin: 10px 0;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.movie .nowPlaying ul li .movieDesc,
+.movie .upcoming ul li .movieDesc,
+.movie .toprated ul li .movieDesc {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  height: 10px;
+  line-height: 8px;
+}
+.movie .nowPlaying ul li .movieDesc span:nth-child(1),
+.movie .upcoming ul li .movieDesc span:nth-child(1),
+.movie .toprated ul li .movieDesc span:nth-child(1) {
+  font-weight: bold;
+  border-right: 1px solid #ccc;
+  padding-right: 28px;
+}
+.movie .nowPlaying .arrowBtn,
+.movie .upcoming .arrowBtn,
+.movie .toprated .arrowBtn {
+  z-index: 2;
+  cursor: pointer;
+  color: #fff;
+  background: #dc143c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  padding-top: 2px;
+  transform: translateY(-50%);
+  transition: background 0.3s, color 0.3s;
+}
+.movie .nowPlaying .arrowBtn#nowPlayingLeftArrow, .movie .nowPlaying .arrowBtn#upcomingLeftArrow, .movie .nowPlaying .arrowBtn#topratedLeftArrow,
+.movie .upcoming .arrowBtn#nowPlayingLeftArrow,
+.movie .upcoming .arrowBtn#upcomingLeftArrow,
+.movie .upcoming .arrowBtn#topratedLeftArrow,
+.movie .toprated .arrowBtn#nowPlayingLeftArrow,
+.movie .toprated .arrowBtn#upcomingLeftArrow,
+.movie .toprated .arrowBtn#topratedLeftArrow {
+  left: 0;
+}
+.movie .nowPlaying .arrowBtn#nowPlayingRightArrow, .movie .nowPlaying .arrowBtn#upcomingRightArrow, .movie .nowPlaying .arrowBtn#topratedRightArrow,
+.movie .upcoming .arrowBtn#nowPlayingRightArrow,
+.movie .upcoming .arrowBtn#upcomingRightArrow,
+.movie .upcoming .arrowBtn#topratedRightArrow,
+.movie .toprated .arrowBtn#nowPlayingRightArrow,
+.movie .toprated .arrowBtn#upcomingRightArrow,
+.movie .toprated .arrowBtn#topratedRightArrow {
+  right: 0;
+}
+.movie .nowPlaying .arrowBtn i,
+.movie .upcoming .arrowBtn i,
+.movie .toprated .arrowBtn i {
+  font-size: 0.8rem;
+}
+.movie .nowPlaying .arrowBtn:hover,
+.movie .upcoming .arrowBtn:hover,
+.movie .toprated .arrowBtn:hover {
+  color: #dc143c;
+  background: #fff;
 }
 
 /* faq */
